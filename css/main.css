@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-primary: #00884f;
+  --color-text: #3d3d3d;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #f1f1f1;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Be Vietnam Pro", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 5.6rem;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-weight: 300;
+  line-height: 2.79rem;
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.28px;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-sm {
+  padding: 13px 20px 15px;
+  border-radius: 0.6rem;
+}
+
+.btn-lg {
+  padding: 17px 24px 19px;
+  border-radius: 0.8rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+}
+
+.btn-black {
+  background-color: var(--color-black);
+}
+
+.btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-black);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  padding: 0 48px;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  z-index: 1000;
+}
+
+.navbar__menu ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar ul li:first-child,
+.navbar ul li:last-child {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  display: none;
+}
+
+.navbar ul li:last-child {
+  width: calc(480px - 48px);
+  height: 96px;
+  position: fixed;
+  bottom: 0;
+}
+
+.navbar ul li:last-child button {
+  width: 48%;
+}
+
+.navbar__menu ul li a:hover {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.navbar__btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar i {
+  font-size: 2.8rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.navbar i:hover {
+  color: var(--color-primary);
+}
+
+/* Hero */
+.hero {
+  max-width: 1304px;
+  padding: 176px 48px 0px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero__txt {
+  padding-left: 104px;
+}
+
+.hero__txt h1 {
+  letter-spacing: -0.96px;
+}
+
+.hero__txt p {
+  color: var(--color-text);
+  font-size: 2rem;
+  letter-spacing: -0.2px;
+  line-height: 3.4rem;
+  margin: 40px 0;
+}
+
+.hero__btn button {
+  margin-right: 24px;
+}
+
+/* partner */
+.partner {
+  width: 1208px;
+  margin-top: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.partner p {
+  width: 584px;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2.79rem;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+.partner__logo {
+  height: 94px;
+  display: flex;
+  gap: 40px;
+}
+
+.partner__logo img {
+  width: 168px;
+  height: 42px;
+}
+
+/* api */
+.api {
+  margin-top: 144px;
+  width: 100%;
+  background: #f1fff7;
+  padding: 144px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.api__txt {
+  max-width: 1208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.api__txt h2 {
+  width: 584px;
+  text-align: center;
+  letter-spacing: -0.8px;
+  line-height: 4.8rem;
+}
+
+.api__txt p {
+  width: 584px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.api__txt button {
+  margin-top: 40px;
+}
+
+.api__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 40px;
+  max-width: 1096px;
+  margin-top: 80px;
+  padding: 0 48px;
+}
+
+.api__list__item {
+  width: 220px;
+}
+
+.api__list__item p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+/* financial, develope */
+.financial,
+.develope {
+  max-width: 1208px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 144px;
+}
+
+.financial img,
+.develope img {
+  width: 100%;
+}
+
+.financial__txt,
+.develope__txt {
+  padding-left: 104px;
+}
+
+.financial__txt p,
+.develope__txt p {
+  margin: 24px 0;
+  line-height: 2.79rem;
+}
+
+.financial__txt ul li,
+.develope__txt ul li {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+.financial__txt ul li i,
+.develope__txt ul li i {
+  color: var(--color-primary);
+  margin-right: 5px;
+}
+.financial__txt button,
+.develope__txt button {
+  margin-top: 40px;
+}
+
+/* usecase */
+.usecase {
+  background-color: #f0fafc;
+  padding: 144px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 144px;
+}
+
+.usecase__txt {
+  width: 1208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.usecase__txt h2 {
+  width: 664px;
+  text-align: center;
+}
+
+.usecase__txt p {
+  width: 456px;
+  text-align: center;
+  margin: 24px;
+  line-height: 2.79rem;
+}
+
+.usecase__txt button {
+  margin-top: 40px;
+}
+
+.usecase__list {
+  max-width: 1208px;
+  display: grid;
+  grid-template-columns: 290.672px 290.672px 290.672px;
+  grid-gap: 64px;
+  padding: 0 48px;
+  margin-top: 80px;
+}
+
+.usecase__list__item p {
+  font-size: 1.6rem;
+}
+
+/* contact */
+.contact {
+  background-color: #38c076;
+  width: 100%;
+  padding: 144px 0;
+}
+
+.contact-bx {
+  width: 1208px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 520px 520px;
+  grid-gap: 40px;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.contact__txt {
+  padding-left: 104px;
+}
+
+.contact__txt h2,
+.contact__txt p {
+  color: var(--color-white);
+}
+
+.contact__txt p {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+.contact__btn button {
+  margin-right: 24px;
+}
+
+/* footer */
+.footer {
+  background-color: var(--color-black);
+  width: 100%;
+}
+
+.footer-bx {
+  max-width: 1308px;
+  margin: 0 auto;
+  padding: 128px 48px;
+  display: grid;
+  grid-template-columns: 168px 168px 168px 168px 1fr;
+  grid-gap: 40px;
+  box-sizing: border-box;
+}
+
+.footer__item ul li {
+  margin-top: 17px;
+  color: var(--color-white);
+}
+
+.footer__item ul li:first-child {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.footer__item ul li a {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.footer__item ul li a:hover {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.footer__item:last-child {
+  padding-left: 104px;
+}
+
+.footer__item:last-child p {
+  color: var(--color-white);
+  margin: 32px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1281px) {
+  .navbar__btn {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 480px;
+    height: 100vh;
+    background-color: var(--color-white);
+  }
+
+  .navbar__menu ul {
+    display: block;
+  }
+
+  .navbar__menu ul li {
+    padding: 0 24px;
+    margin-top: 33px;
+  }
+
+  .navbar ul li:first-child,
+  .navbar ul li:last-child {
+    display: flex;
+  }
+
+  .navbar ul li:first-child {
+    margin-top: 0;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+
+  .footer-bx{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  }
+  
+
+  .footer__item:last-child{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero, .partner, .api, .financial, .develope, .usecase, .contact{
+        width: 100%;
+    }
+}
+
